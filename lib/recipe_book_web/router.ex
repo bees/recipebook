@@ -5,7 +5,13 @@ defmodule RecipeBookWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", RecipeBookWeb do
-    pipe_through :api
+  scope "/" do
+    pipe_through(:api)
+
+    forward "/graphiql",
+            Absinthe.Plug.GraphiQL,
+            schema: RecipeBookWeb.Schema
+
+    forward "/api", Absinthe.Plug, schema: RecipeBookWeb.Schema
   end
 end

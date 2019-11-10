@@ -20,7 +20,7 @@ defmodule RecipeBook.MixProject do
   def application do
     [
       mod: {RecipeBook.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:corsica, :logger, :runtime_tools]
     ]
   end
 
@@ -36,12 +36,14 @@ defmodule RecipeBook.MixProject do
       {:phoenix, "~> 1.4.10"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
+      {:corsica, "~> 1.1"},
       {:ecto_sql, "~> 3.1"},
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:absinthe, "~> 1.4"}
+      {:absinthe, "~> 1.4"},
+      {:absinthe_plug, "~> 1.4"}
     ]
   end
 

@@ -9,3 +9,31 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+RecipeBook.Recipes.create_recipe(%{
+  name: "bad spaghetti",
+  ingredients: ["box spaghetti", "water, boiling", "love"],
+  instructions: ["take spaghetti out of box and put into boiling water", "pray"],
+  source: "https://paulbl.art/"
+})
+
+RecipeBook.Recipes.create_recipe(%{
+  name: "good spaghetti",
+  ingredients: ["box spaghetti", "water, boiling", "love"],
+  instructions: ["take spaghetti out of box and put into boiling water", "pray"],
+  source: "https://paulbl.art/"
+})
+
+RecipeBook.Recipes.create_recipe(%{
+  name: "mediocre spaghetti",
+  ingredients: ["box spaghetti", "water, boiling", "love"],
+  instructions: ["take spaghetti out of box and put into boiling water", "pray"],
+  source: "https://paulbl.art/"
+})
+
+RecipeBook.Recipes.create_recipe(%{
+  name: "lovers spaghetti",
+  ingredients: ["box spaghetti", "water, boiling", "love"],
+  instructions: ["take spaghetti out of box and put into boiling water", "pray"],
+  source: "https://paulbl.art/"
+})

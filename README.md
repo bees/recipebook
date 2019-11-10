@@ -1,19 +1,53 @@
 # RecipeBook
 
-To start your Phoenix server:
+A simple application that extracts structured data (Json-LD or microdata) from
+recipe blogs and serves them with a consistent display devoid of SEO
+keyword-stuffing.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
+Core functionality is yet to be implemented. Ideally eventually you can just
+point it at your pinterest recipes board or give it RSS feeds of blogs you like and it
+will automatically ingest them and give you someting you can use while cooking.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+# Development
 
-## Learn more
+## Backend
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+To start:
+```sh
+mix deps.get
+# required right now unless you make changes to config/dev.exs, will enable 
+# host-only development some day if someone actually wants it
+docker-compose up -d 
+mix ecto.setup
+mix phx.server
+```
+
+Now you can visit [`localhost:4000/graphiql`](http://localhost:4000/graphiql)
+from your browser.
+
+### Schema Updates 
+
+If you update schemas, you'll need to regenerate the schema file consumed by
+the frontend.
+
+```sh
+mix absinthe.schema.json
+```
+
+## Frontend(s)
+
+Currently there are two frontends and they are as unfininished as the backend.
+
+The Reason codebase is the one I'd like to move forward with (better type
+system, pattern matching, better styling DSL) but I'm running into issues
+getting graphql working.
+
+The Typescript codebase is the fallback.
+
+Once I've settled on one I'll document development workflow in it properly.
+
+### Why not only use Phoenix?
+
+Ideally I want this to be a PWA. I'm also far more comfortable writing UIs
+using React so this is also just laziness on my part.
