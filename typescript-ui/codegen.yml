@@ -1,0 +1,13 @@
+overwrite: true
+schema: '../schema.json'
+documents: 'src/gql-documents/**'
+config:
+  noNamespaces: true
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
