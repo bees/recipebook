@@ -30,3 +30,5 @@ recipe_book-*.tar
 *.sw*
 Session.vim
 .elixir_ls
+
+node_modules
