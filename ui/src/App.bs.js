@@ -2,8 +2,8 @@
 
 var Css = require("bs-css/src/Css.js");
 var React = require("react");
-var Card$ReasonReactExamples = require("./Card.bs.js");
-var Theme$ReasonReactExamples = require("./Theme.bs.js");
+var Card$RecipeBook = require("./Card.bs.js");
+var Theme$RecipeBook = require("./Theme.bs.js");
 
 var splitLayout = Css.style(/* :: */[
       Css.display(Css.grid),
@@ -41,7 +41,7 @@ var splitLayout = Css.style(/* :: */[
     ]);
 
 var sideBar = Css.style(/* :: */[
-      Css.padding(Theme$ReasonReactExamples.basePadding),
+      Css.padding(Theme$RecipeBook.basePadding),
       /* [] */0
     ]);
 
@@ -80,7 +80,7 @@ function App(Props) {
                       className: title
                     }, "Recipes"), React.createElement("div", {
                       className: cardList
-                    }, React.createElement(Card$ReasonReactExamples.make, {
+                    }, React.createElement(Card$RecipeBook.make, {
                           children: React.createElement("h1", undefined, "wow")
                         }))));
 }

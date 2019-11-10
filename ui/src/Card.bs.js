@@ -2,7 +2,7 @@
 
 var Css = require("bs-css/src/Css.js");
 var React = require("react");
-var Theme$ReasonReactExamples = require("./Theme.bs.js");
+var Theme$RecipeBook = require("./Theme.bs.js");
 
 var card = Css.style(/* :: */[
       Css.display(Css.flexBox),
@@ -13,9 +13,9 @@ var card = Css.style(/* :: */[
           /* :: */[
             Css.backgroundColor(Css.white),
             /* :: */[
-              Css.boxShadow(Theme$ReasonReactExamples.shadow),
+              Css.boxShadow(Theme$RecipeBook.shadow),
               /* :: */[
-                Css.padding(Theme$ReasonReactExamples.basePadding),
+                Css.padding(Theme$RecipeBook.basePadding),
                 /* :: */[
                   Css.borderTop(Css.px(6), Css.solid, Css.tomato),
                   /* [] */0
@@ -30,9 +30,9 @@ var card = Css.style(/* :: */[
 var title = Css.style(/* :: */[
       Css.fontSize(Css.rem(1.5)),
       /* :: */[
-        Css.color(Theme$ReasonReactExamples.textColor),
+        Css.color(Theme$RecipeBook.textColor),
         /* :: */[
-          Css.marginBottom(Theme$ReasonReactExamples.basePadding),
+          Css.marginBottom(Theme$RecipeBook.basePadding),
           /* [] */0
         ]
       ]

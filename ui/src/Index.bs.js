@@ -2,8 +2,8 @@
 
 var React = require("react");
 var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
-var App$ReasonReactExamples = require("./App.bs.js");
+var App$RecipeBook = require("./App.bs.js");
 
-ReactDOMRe.renderToElementWithId(React.createElement(App$ReasonReactExamples.make, { }), "app");
+ReactDOMRe.renderToElementWithId(React.createElement(App$RecipeBook.make, { }), "app");
 
 /*  Not a pure module */

@@ -1,5 +1,5 @@
 {
-  "name": "reason-react-examples",
+  "name": "recipe-book-",
   "reason": {
     "react-jsx": 3
   },
@@ -7,7 +7,7 @@
     "dir" : "src",
     "subdirs" : true
   },
-  "ppx-flags": ["graphql_ppx/ppx"],
+  "ppx-flags": ["@baransu/graphql_ppx_re/ppx"],
   "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
   "package-specs": [{
     "module": "commonjs",

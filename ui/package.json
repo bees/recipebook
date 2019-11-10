@@ -26,8 +26,7 @@
   },
   "devDependencies": {
     "@baransu/graphql_ppx_re": "^0.3.2",
-    "bs-platform": "^6.2.1",
-    "graphql_ppx": "^0.2.8",
+    "bs-platform": "^5.0.6",
     "moduleserve": "^0.8.4"
   }
 }
