@@ -38,6 +38,23 @@ defmodule RecipeBook.Recipes do
   def get_recipe!(id), do: Repo.get!(Recipe, id)
 
   @doc """
+  Gets a single recipe.
+
+
+  Returns nil if the Recipe does not exist.
+
+  ## Examples
+
+      iex> get_recipe(123)
+      %Recipe{}
+
+      iex> get_recipe!(456)
+      nil
+
+  """
+  def get_recipe(id), do: Repo.get(Recipe, id)
+
+  @doc """
   Creates a recipe.
 
   ## Examples

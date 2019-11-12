@@ -10,14 +10,14 @@ module Styles = {
       backgroundColor(white),
       boxShadow(Theme.shadow),
       padding(Theme.basePadding),
-      borderTop(px(6), solid, tomato),
+      hover([cursor(`pointer)]),
     ]);
 
   let title =
     style([
-      fontSize(rem(1.5)),
       color(Theme.textColor),
-      marginBottom(Theme.basePadding),
+      marginBottom(Theme.Spacing.small),
+      fontSize(Theme.FontSize.f4),
     ]);
 
   let actionButton = disabled =>
@@ -30,8 +30,8 @@ module Styles = {
 };
 
 [@react.component]
-let make = (~children) =>
-  <div className=Styles.card>
-    <h4 className=Styles.title> {ReasonReact.string("Hello")} </h4>
+let make = (~children, ~title, ~onClick) =>
+  <div className=Styles.card onClick>
+    <h4 className=Styles.title> title </h4>
     children
   </div>;

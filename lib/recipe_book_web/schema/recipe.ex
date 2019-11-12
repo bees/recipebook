@@ -4,8 +4,8 @@ defmodule RecipeBookWeb.Schema.Recipe do
   object :recipe do
     field :id, non_null(:integer)
     field :name, non_null(:string)
-    field :ingredients, non_null(list_of(:string))
-    field :instructions, non_null(list_of(:string))
+    field :ingredients, non_null(list_of(non_null(:string)))
+    field :instructions, non_null(list_of(non_null(:string)))
     field :total_time, :string
     field :cook_time, :string
     field :yield, :integer

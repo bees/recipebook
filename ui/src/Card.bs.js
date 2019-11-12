@@ -17,7 +17,10 @@ var card = Css.style(/* :: */[
               /* :: */[
                 Css.padding(Theme$RecipeBook.basePadding),
                 /* :: */[
-                  Css.borderTop(Css.px(6), Css.solid, Css.tomato),
+                  Css.hover(/* :: */[
+                        Css.cursor(/* pointer */-786317123),
+                        /* [] */0
+                      ]),
                   /* [] */0
                 ]
               ]
@@ -28,11 +31,11 @@ var card = Css.style(/* :: */[
     ]);
 
 var title = Css.style(/* :: */[
-      Css.fontSize(Css.rem(1.5)),
+      Css.color(Theme$RecipeBook.textColor),
       /* :: */[
-        Css.color(Theme$RecipeBook.textColor),
+        Css.marginBottom(Theme$RecipeBook.Spacing.small),
         /* :: */[
-          Css.marginBottom(Theme$RecipeBook.basePadding),
+          Css.fontSize(Theme$RecipeBook.FontSize.f4),
           /* [] */0
         ]
       ]
@@ -62,11 +65,14 @@ var Styles = {
 
 function Card(Props) {
   var children = Props.children;
+  var title$1 = Props.title;
+  var onClick = Props.onClick;
   return React.createElement("div", {
-              className: card
+              className: card,
+              onClick: onClick
             }, React.createElement("h4", {
                   className: title
-                }, "Hello"), children);
+                }, title$1), children);
 }
 
 var make = Card;
