@@ -43,7 +43,13 @@ defmodule RecipeBook.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:absinthe, "~> 1.4"},
-      {:absinthe_plug, "~> 1.4"}
+      {:absinthe_plug, "~> 1.4"},
+      {:mojito, "~> 0.6.0"},
+      {:meeseeks, "~> 0.14.0", override: true},
+      {:json_ld, "~> 0.3"},
+      {:microdata, "~> 0.2.4"},
+      {:httpoison, "~> 1.0"},
+      {:poison, "~> 3.1"}
     ]
   end
 
