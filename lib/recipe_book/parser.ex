@@ -52,7 +52,7 @@ defmodule RecipeBook.Parser do
       case flatten_item_properties(item, "#{prefix}//schema.org/recipeInstructions") do
         howToSteps = [%Microdata.Item{} | _] ->
           howToSteps
-          |> Enum.map(fn item ->
+          |> Enum.flat_map(fn item ->
             flatten_item_properties(item, "#{prefix}//schema.org/text")
           end)
 
