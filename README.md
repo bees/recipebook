@@ -41,7 +41,7 @@ Currently there are two frontends and they are as unfininished as the backend.
 
 The Reason codebase is the one I'd like to move forward with (better type
 system, pattern matching, better styling DSL) but I'm running into issues
-getting graphql working.
+getting graphql working on the latest version of bs-platform.
 
 The Typescript codebase is the fallback.
 
