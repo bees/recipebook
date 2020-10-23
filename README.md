@@ -1,3 +1,10 @@
+Archiving this repo because:
+
+1. The data cleaning necessary to make (CRF++'s)[https://taku910.github.io/crfpp/] output consistently useful seemed like it would be suffering
+2. I found (something)[https://www.paprikaapp.com/] that is close enough to what I wanted
+
+---
+
 # RecipeBook
 
 A simple application that extracts structured data (Json-LD or microdata) from
